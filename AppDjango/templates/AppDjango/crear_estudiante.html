@@ -1,0 +1,23 @@
+{% extends "AppDjango/padre.html" %}
+
+{% load static %}
+
+
+{% block titulo %}
+    <h1>Bienvenidos a LA CREACION DE ESTUDIANTES!</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<h1> FORMULARIO DE ESTUDIANTES </h1>
+<h2>{{ mensaje }}</h2>
+<form action="{% url 'crearEstudiante' %}" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }} <!-- form.as_p / form.as_ul / form -->
+    </table>
+    <input type="submit" value="crear estudiante">         
+</form>
+
+
+
+{% endblock %}

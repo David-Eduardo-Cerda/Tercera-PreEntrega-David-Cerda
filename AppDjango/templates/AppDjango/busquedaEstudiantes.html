@@ -1,0 +1,22 @@
+{% extends "AppDjango/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">FORMULARIO DE BUSQUEDA DE ESTUDIANTES POR APELLIDO</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<h3>{{ mensaje }}</h3>
+
+<form action="{% url 'buscandoEstudiante' %}" method="GET"> 
+
+    <input type="text" name="apellido" id="apellido" placeholder="INSERTE APELLIDO">
+
+    <input type="submit" value="buscar estudiante">
+
+
+</form>
+
+{% endblock %}

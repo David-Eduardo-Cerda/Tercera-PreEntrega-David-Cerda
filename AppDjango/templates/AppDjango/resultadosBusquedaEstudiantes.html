@@ -1,0 +1,55 @@
+{% extends "AppDjango/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">resultados de la busqueda de estudiantes</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+{% if estudiantes %}
+
+<h2>LISTADO DE Estudiantes</h2>
+<table>
+    <thead>
+        <tr>
+            
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+        {% for estudiante in estudiantes %}
+        <tr>
+            
+            <td>
+                {{ estudiante.nombre}}
+            </td>
+            <td>
+                {{ estudiante.apellido}}
+            </td>
+            <td>
+                {{ estudiante.email}}
+            </td>
+            
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% else %}
+
+<h2>NO HAY CURSOS QUE RESPONDAN A ESA BUSQUEDA</h2>
+
+{% endif %}
+
+
+
+{% endblock %}

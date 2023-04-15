@@ -1,7 +1,3 @@
-# Titulo Principal markdown
+Todo el repositorio esta guardado en la rama Maestro
 
-## Segundo Titulo
 
-- Primero 
-- Segundo
-- Tercero
